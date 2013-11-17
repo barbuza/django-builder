@@ -8,7 +8,7 @@ RUN add-apt-repository -y ppa:chris-lea/node.js
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends curl wget git vim
 RUN apt-get install -y --no-install-recommends supervisor openssh-server postgresql memcached nginx-light nodejs
-RUN apt-get install -y --no-install-recommends python-pip python-virtualenv python-dev build-essential libjpeg-dev libpq-dev libmemcached-dev
+RUN apt-get install -y --no-install-recommends python-pip python-virtualenv python-dev build-essential libjpeg-dev libpq-dev libmemcached-dev libncurses5-dev
 RUN mkdir -p /var/run/sshd
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN dpkg-divert --local --rename --add /sbin/initctl
